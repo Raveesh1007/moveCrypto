@@ -34,6 +34,15 @@ export function Chart({
                     Bearish
                 </h2>
             </div>
+            <div className="mt-3 flex justify-center">
+                <div
+                className="bg-red-500 py-5 rounded-lg  opacity-70 hover:opacity-100 transition-opacity ease-in-out duration-500"
+                style={{width: `${bearishPercentage}%`}}>
+                    <div className="flex justify-center font-semibold">
+                        {bearishPercentage.toFixed(2)}%
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
