@@ -31,5 +31,24 @@ export function VotingButton({
         }else(direction === "bearish"){
             bearishValue = 1;
         }
+
+        try{
+            await axios.get(`${process.env.NEXT_PUBLIC_BASE}/api/${crypto}`, {
+                params: {
+                    bullish: bullishValue,
+                    bearish: bearishValue
+                }
+            });
+        } catch(e){
+            seterror(true);
+        }
+        setDisabled(true);
     }
+}
+
+function Erroralert({title, message}: {title: string, message: string}){
+    return(
+        <div 
+        className=""
+    )
 }
