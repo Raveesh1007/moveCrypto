@@ -12,7 +12,7 @@ export async function POST(req: NextRequest){
         const {bull, bear} = voteAssign(bullish, bearish);
         await BTCschema.updateOne({
             $inc:{
-                bullish: bear,
+                bullish: bull,
                 bearish: bear,
             },
         });
