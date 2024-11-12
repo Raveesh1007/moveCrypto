@@ -4,7 +4,7 @@ import { BTCschema } from "@/app/models/schema";
 
 export default async function Bitcoin() {
     try {
-      const { votes, price } = await fetchCryptoData{BTCschema, "bitcoin");
+      const { votes, price } = await fetchCryptoData{, "bitcoin"};
       return (
         <CryptoPage
           crypto="Bitcoin"
