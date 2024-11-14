@@ -1,4 +1,4 @@
-"use Client"
+"use client"
 
 import React, {useState} from "react"
 import { CardBody, CardContainer, CardItem } from "./ui/3dcard"
